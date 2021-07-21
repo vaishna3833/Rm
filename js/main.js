@@ -126,7 +126,8 @@ jQuery(window).on('resize', function() {
 	var $container = jQuery('.product-list');
 	// initialize isotope
 	$container.isotope({
-	  itemSelector: '.product-grid'
+	 // itemSelector: '.product-grid'
+	 filter:':nth-child(-n+3)'
 	});
 	// filter items when filter link is clicked
 	jQuery('.product-list-filter a').on('click', function(){
