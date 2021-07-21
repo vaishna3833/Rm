@@ -6622,7 +6622,9 @@ blockquote {
 .main-footer {
   float: left;
   width: 100%; }
-
+.link li{
+  border-top:0 !important;
+}
 .widget-2 {
   margin-top: 20px;
   width: 100%;
