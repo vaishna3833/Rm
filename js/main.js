@@ -134,7 +134,9 @@ jQuery(window).on('resize', function() {
 		jQuery('.product-list-filter a').removeClass('active');
 		jQuery(this).addClass('active');
 	  var selector = jQuery(this).attr('data-filter');
-	  $container.isotope({ filter: selector });
+	  $container.isotope({ filter: function(){
+		  return $(this).is(selectore) && $(this).index(selector) < 3;
+	  } });
 	  return false;
 	});
 	// product image lightbox
